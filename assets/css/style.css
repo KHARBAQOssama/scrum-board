@@ -1,0 +1,58 @@
+*{
+    box-sizing: border-box;
+}
+.pace {
+    display: none;
+}
+
+.main-style {
+    min-height: 100vh;
+    background: url(../img/cover/cover-scrum-board.png) no-repeat fixed;
+    background-size: 360px;
+    background-position: right bottom;
+}
+
+#bContainer{
+    position: relative;
+}
+.editD{
+    position: absolute;
+    background-color: rgba(229, 168, 25, 0.906);
+    border-radius: 0.3em;
+    display: none;
+    float: right;
+    align-items: center;
+    text-align: center;
+    width: 20%;
+    height: 100%;
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    -ms-border-radius: 0.3em;
+    -o-border-radius: 0.3em;
+}
+.editD i{
+    display: block;
+    width: 60%;
+    margin: auto;
+}
+#bContainer:hover > .editD{
+    display: block;
+}
+
+.editD .bi-pencil-square:hover{
+    background-color: aliceblue;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+.editD .bi-trash:hover{
+    background-color: rgb(255, 0, 0);
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+

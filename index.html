@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<meta charset="utf-8" />
+	<title>YouCode | Scrum Board</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	
+	<!-- ================== BEGIN core-css ================== -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+	<link href="assets/css/vendor.min.css" rel="stylesheet" />
+	<link href="assets/css/default/app.min.css" rel="stylesheet" />
+	<link href="assets/css/style.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+	<!-- ================== END core-css ================== -->
+</head>
+<body style="background-color: rgba(237,215,133,0.2);">
+
+	<!-- BEGIN #app -->
+	<div id="app" class="app-without-sidebar">
+		<!-- BEGIN #content -->
+		<div id="content" class="app-content main-style">
+			<div class="container d-flex justify-content-between ">
+				<div>
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item fw-600"><a href="javascript:;">Home</a></li>
+						<li class="breadcrumb-item active">Scrum Board </li>
+					</ol>
+					<!-- BEGIN page-header -->
+					<h1 class="page-header fw-800">
+						Scrum Board 
+					</h1>
+					<!-- END page-header -->
+				</div>
+				
+				<div class="">
+					<button type="button" class="btn bg-test" data-bs-toggle="modal"  id="clear" href="#modal-task"><i class="bi bi-plus-lg me-2 fw-bold"></i> Add Task</a>
+				</div>
+			</div>
+			<div class=" d-flex row gap-5 container-fluid">
+				<div class="col-lg col-md-5 col-sm-12 d-flex justify-content-between  p-0 border-0 rounded" style="background-color: #E6EEC7;">
+					<div class="w-100" >
+						<div class=" border-0 rounded text-start w-100 p-2 px-4 mb-2" style="background-color: #C1CE8E;">
+							<h4 class="m-0">To do (<span id="to-do-tasks-count">0</span>)</h4>
+						</div>
+						<div class="container " id="to-do-tasks">
+							<!-- TO DO TASKS HERE -->
+						</div>
+					</div>
+				</div>
+				<div class="col-lg col-md-5 col-sm-12 d-flex justify-content-between  p-0 border-0 rounded" style="background-color: #E7EADA;">
+					<div class="w-100">
+						<div class=" border-0 rounded text-start w-100 p-2 px-4 mb-2" style="background-color: #DBE3B5;">
+							<h4 class="m-0">IN PROGRESS(<span id="in-progress-tasks-count">0</span>)</h4>
+						</div>
+						<div class="container" id="in-progress-tasks">
+							<!-- IN PROGRESS TASKS HERE -->
+						</div>
+					</div>
+				</div>
+				<div class="col-lg col-md-5 col-sm-12 d-flex justify-content-between p-0 border-0 rounded" style="background-color: #E9ECE1;">
+					<div class="w-100">
+						<div class=" border-0 rounded text-start w-100 p-2 px-4 mb-2" style="background-color: #DFE8CC;">
+							<h4 class="m-0">DONE (<span id="done-tasks-count">0</span>)</h4>
+
+						</div>
+						<div class="container position-relative" id="done-tasks">
+							<!-- DONE TASKS HERE -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END #content -->
+
+	<!-- END #app -->
+	<!-- TASK MODAL -->
+	<div class="modal fade" id="modal-task" >
+		<!-- Modal content goes here -->
+		<div class="modal-dialog modal-dialog-centered" >
+			<div class="modal-content" style="background-color: #fbf7e6;">
+			  <div class="modal-header shadow-sm" style="background-color: #D9CDB8;">
+				<h1 class="modal-title text-center  fs-6 fw-bolder">Add task</h1>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			  </div>
+			  <div class="modal-body d-flex flex-column justify-content-center " >
+				<div class="">
+					<label for="task-title" class="d-block fw-bolder mb-1">Title</label>
+					<input id="task-title" class="form-control form-control-sm" type="text">
+					<div>
+						<label class="d-block fw-bolder mb-1">Type:</label>
+						<div class="ms-3">
+							<input type="radio"  name="type" id="feature" value="feature" checked>
+							<label for="feature" >feature</label>
+						</div>
+						<div class="ms-3 mb-2">
+							<input type="radio" name="type" id="bug" value="Bug">
+							<label for="bug">Bug</label>
+						</div>
+					</div>
+					<div>
+					<label for="propriete" class="d-block fw-bolder mb-1">Propriete</label>
+						<select class="form-select" name="propriete" type="input" id="priority">
+							<option value="">Select Here</option>
+							<option value="Critical">Critical</option>
+							<option value="High">High</option>
+							<option value="Medium">Medium</option>
+							<option value="Low">Low</option>
+						</select>
+					</div>
+					<div>
+						<label for="status" class="d-block fw-bolder mb-1">Status</label>
+						<select class="form-select" name="status" type="input" id="status">
+							<option value="">Select Here</option>
+							<option value="To Do">TO DO</option>
+							<option value="In Progress">IN PROGRESS</option>
+							<option value="Done">DONE</option>
+						</select>
+					</div>
+					<div>
+						<label for="date" class="d-block fw-bolder mb-1">Date</label>
+						<input class="form-control form-control-sm" type="date" id="date" name="date">
+					</div>
+					<div>
+						<label for="discription" class="d-block fw-bolder mb-1">discription</label>
+						<input class="form-control form-control-sm" type="text" class="w-75 mb-1" id="description" name="discription">
+					</div>
+				</div>
+			  </div>
+			  <div class="modal-footer">
+				<button class="btn text-black" aria-label="submit" id="submit"  data-bs-toggle="modal" >Done</button>
+			  </div>
+			</div>
+
+		  </div>
+
+	</div>
+	
+	<!-- ================== BEGIN core-js ================== -->
+	<script src="./assets/js/data.js"></script>
+	<!-- <script src="./assets/js/app.js" type="module"></script> -->
+	<script src="./assets/js/vendor.min.js"></script>
+	<script src="./assets/js/app.min.js"></script>
+	
+	<!-- ================== END core-js ================== -->
+</body>
+</html>
