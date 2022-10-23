@@ -80,12 +80,12 @@
 
 	<!-- END #app -->
 	<!-- TASK MODAL -->
-	<div class="modal fade" id="modal-task" >
+	<form class="modal fade" id="modal-task" >
 		<!-- Modal content goes here -->
 		<div class="modal-dialog modal-dialog-centered" >
 			<div class="modal-content" style="background-color: #fbf7e6;">
 			  <div class="modal-header shadow-sm" style="background-color: #D9CDB8;">
-				<h1 class="modal-title text-center  fs-6 fw-bolder">Add task</h1>
+				<h1 class="modal-title text-center  fs-6 fw-bolder" id="form-title">Add task</h1>
 				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			  </div>
 			  <div class="modal-body d-flex flex-column justify-content-center " >
@@ -94,7 +94,7 @@
 					<div>
 						<label class="d-block fw-bolder mb-1">Type:</label>
 						<div class="ms-3">
-							<input type="radio"  name="type" id="feature" value="feature" checked>
+							<input type="radio"  name="type" id="feature" value="Feature">
 							<label for="feature" >feature</label>
 						</div>
 						<div class="ms-3 mb-2">
@@ -103,7 +103,7 @@
 						</div>
 					</div>
 					<div>
-					<label for="propriete" class="d-block fw-bolder mb-1">Propriete</label>
+					<label for="propriete" class="d-block fw-bolder mb-1">Propriete</label> 
 						<select class="form-select" name="propriete" type="input" id="priority">
 							<option value="High">High</option>
 							<option value="Critical">Critical</option>
@@ -135,11 +135,10 @@
 
 		  </div>
 
-	</div>
+	</form>
 	<!-- ================== BEGIN core-js ================== -->
 	<!-- <script src="./assets/js/data.js"></script> -->
-	<!-- <script src="./assets/js/app.js" type="module"></script> -->
-	<script src="./assets/js/crud.js"></script>
+	<script src="./assets/js/app.js"></script>
 	<script src="./assets/js/vendor.min.js"></script>
 	<script src="./assets/js/app.min.js"></script>
 	

@@ -17,7 +17,7 @@
 }
 .editD{
     position: absolute;
-    background-color: rgba(229, 168, 25, 0.906);
+    background-color: rgba(255, 255, 255, 0.897);
     border-radius: 0.3em;
     display: none;
     float: right;
@@ -40,7 +40,7 @@
 }
 
 .editD .bi-pencil-square:hover{
-    background-color: aliceblue;
+    background-color: rgb(184, 184, 184);
     border-radius: 2px;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
